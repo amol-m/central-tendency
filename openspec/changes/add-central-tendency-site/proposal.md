@@ -15,7 +15,7 @@ School students often memorise the formulas for mean, median and mode without un
   - an outlier explorer that shows how one extreme value pulls the mean but barely moves the median;
   - a short "which average?" quiz with instant feedback.
 - Add a small, tested calculation module that every demo uses for mean, median and mode.
-- Make the site work without a build step or network access so it can be hosted on GitHub Pages or opened from disk.
+- Make the site work without a build step or network access so it can be hosted on GitHub Pages or served from any simple local web server.
 
 ## Capabilities
 

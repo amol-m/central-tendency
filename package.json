@@ -1,0 +1,17 @@
+{
+  "name": "central-tendency",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An interactive website that teaches mean, median and mode to school students.",
+  "type": "module",
+  "scripts": {
+    "start": "http-server . -p 8080 -c-1",
+    "test": "node --test \"tests/unit/*.test.js\"",
+    "test:e2e": "playwright test",
+    "spec:validate": "openspec validate --all --strict"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "http-server": "14.1.1"
+  }
+}

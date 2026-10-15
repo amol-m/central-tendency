@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mean, Median and Mode</title>
+  <meta name="description" content="Learn mean, median and mode by moving data with your own hands.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='8' cy='22' r='5' fill='%232563eb'/%3E%3Ccircle cx='16' cy='22' r='5' fill='%230b7a54'/%3E%3Ccircle cx='16' cy='12' r='5' fill='%230b7a54'/%3E%3Ccircle cx='24' cy='22' r='5' fill='%23c2410c'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the lessons</a>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Maths for curious minds</p>
+      <h1>What's <em>typical</em>?</h1>
+      <p class="lede">Mean, median and mode are three ways to find one number that sums up a whole set of data. Read a little, then grab the dots and see what happens.</p>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Sections">
+    <ul class="wrap">
+      <li><a href="#intro">Intro</a></li>
+      <li><a href="#mean" class="nav-mean">Mean</a></li>
+      <li><a href="#median" class="nav-median">Median</a></li>
+      <li><a href="#mode" class="nav-mode">Mode</a></li>
+      <li><a href="#playground">Playground</a></li>
+      <li><a href="#choosing">Which one?</a></li>
+      <li><a href="#quiz">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <!-- ───────────── Introduction ───────────── -->
+    <section id="intro" class="section wrap">
+      <h2>What is an average?</h2>
+      <p>Imagine your teacher asks, "How tall is a typical person in this class?" Nobody wants to hear all thirty heights. They want <strong>one number</strong> that describes the whole group.</p>
+      <p>That one number is called a <strong>measure of central tendency</strong>. It's a fancy name for "where the middle of the data is". In everyday life we usually just call it an <strong>average</strong>.</p>
+      <p>There are three main kinds, and each finds the "middle" in its own way:</p>
+      <ul class="trio">
+        <li class="trio-card mean"><span class="trio-name">Mean</span><span>the fair share</span></li>
+        <li class="trio-card median"><span class="trio-name">Median</span><span>the middle one</span></li>
+        <li class="trio-card mode"><span class="trio-name">Mode</span><span>the most common</span></li>
+      </ul>
+    </section>
+
+    <!-- ───────────── Mean ───────────── -->
+    <section id="mean" class="section wrap lesson lesson-mean">
+      <h2><span class="tag mean">Mean</span> The fair share</h2>
+      <p class="definition">The <strong>mean</strong> is what each value would be if everything were shared out equally.</p>
+      <h3>How to find it</h3>
+      <ol class="steps">
+        <li><strong>Add them up.</strong> Find the total of all the values.</li>
+        <li><strong>Divide by how many.</strong> Divide the total by the number of values.</li>
+      </ol>
+      <div class="worked" data-check="mean" data-values="2,4,4,5,10" data-expect="5">
+        <p class="worked-title">Worked example</p>
+        <p>Maya's football team scored <span class="nums">2, 4, 4, 5, 10</span> goals in five matches.</p>
+        <p>Add them up: 2 + 4 + 4 + 5 + 10 = <strong>25</strong></p>
+        <p>Divide by how many: 25 ÷ 5 = <strong>5</strong></p>
+        <p class="answer">The mean is <strong>5 goals</strong> per match.</p>
+      </div>
+      <p class="tip">Think of it like this: if the team had scored exactly the same number in every match, and still got 25 in total, they'd have scored 5 each time.</p>
+    </section>
+
+    <!-- ───────────── Median ───────────── -->
+    <section id="median" class="section wrap lesson lesson-median">
+      <h2><span class="tag median">Median</span> The middle one</h2>
+      <p class="definition">The <strong>median</strong> is the middle value when all the values are put in order.</p>
+      <h3>How to find it</h3>
+      <ol class="steps">
+        <li><strong>Put them in order</strong>, from smallest to largest.</li>
+        <li><strong>Find the middle.</strong> If there are two middle values, the median is halfway between them (add them and divide by 2).</li>
+      </ol>
+      <div class="worked" data-check="median" data-values="25,40,15,30,20" data-expect="25">
+        <p class="worked-title">Worked example: an odd number of values</p>
+        <p>Five friends spent <span class="nums">25, 40, 15, 30, 20</span> minutes on homework.</p>
+        <p>In order: 15, 20, <mark class="hl-median">25</mark>, 30, 40</p>
+        <p class="answer">The median is <strong>25 minutes</strong>.</p>
+      </div>
+      <div class="worked" data-check="median" data-values="4,12,7,9,15,6" data-expect="8">
+        <p class="worked-title">Worked example: an even number of values</p>
+        <p>Six cousins are <span class="nums">4, 12, 7, 9, 15, 6</span> years old.</p>
+        <p>In order: 4, 6, <mark class="hl-median">7</mark>, <mark class="hl-median">9</mark>, 12, 15</p>
+        <p>There are two middle values, so find halfway: (7 + 9) ÷ 2 = <strong>8</strong></p>
+        <p class="answer">The median is <strong>8 years old</strong>, even though nobody is actually 8.</p>
+      </div>
+
+      <div class="demo-card" data-demo="lineup" id="lineup">
+        <div class="demo-head">
+          <h3>Try it: the median line-up</h3>
+          <p>Press <strong>Sort</strong> to put the cards in order and find the middle.</p>
+        </div>
+        <div class="demo-controls">
+          <label>Cards
+            <select class="lineup-count">
+              <option>5</option><option>6</option><option selected>7</option><option>8</option><option>9</option>
+            </select>
+          </label>
+          <button type="button" class="btn lineup-new">New numbers</button>
+          <button type="button" class="btn btn-primary btn-median lineup-sort">Sort</button>
+        </div>
+        <div class="lineup-track" role="list" aria-label="Number cards"></div>
+        <p class="lineup-result demo-result" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ───────────── Mode ───────────── -->
+    <section id="mode" class="section wrap lesson lesson-mode">
+      <h2><span class="tag mode">Mode</span> The most common</h2>
+      <p class="definition">The <strong>mode</strong> is the value that appears most often.</p>
+      <h3>How to find it</h3>
+      <ol class="steps">
+        <li><strong>Count</strong> how many times each value appears.</li>
+        <li><strong>Pick the winner.</strong> The value with the highest count is the mode.</li>
+      </ol>
+      <div class="worked" data-check="mode" data-values="5,6,6,7,6,8,5" data-expect="6">
+        <p class="worked-title">Worked example</p>
+        <p>Seven students have shoe sizes <span class="nums">5, 6, 6, 7, 6, 8, 5</span>.</p>
+        <p>Size 5 appears 2 times, size 6 appears <strong>3 times</strong>, sizes 7 and 8 appear once.</p>
+        <p class="answer">The mode is <strong>size 6</strong>.</p>
+      </div>
+      <p>A data set doesn't always have exactly one mode:</p>
+      <ul class="mode-cases">
+        <li class="worked mini" data-check="mode" data-values="1,1,4,4,6" data-expect="1,4"><strong>More than one mode.</strong> In <span class="nums">1, 1, 4, 4, 6</span> both 1 and 4 appear twice, so there are two modes: 1 and 4.</li>
+        <li class="worked mini" data-check="mode" data-values="2,5,8" data-expect="none"><strong>No mode.</strong> In <span class="nums">2, 5, 8</span> every value appears once, so nothing is more common than anything else. There is no mode.</li>
+      </ul>
+      <p class="tip">The mode is the only average that works with words, not just numbers. You can find the most popular fruit, but you can't add up bananas and divide!</p>
+
+      <div class="demo-card" data-demo="tally" id="tally">
+        <div class="demo-head">
+          <h3>Try it: favourite fruit survey</h3>
+          <p>Tap a fruit to add a vote. The tallest bar is the mode.</p>
+        </div>
+        <div class="tally-buttons"></div>
+        <div class="tally-chart" role="img" aria-label="Bar chart of fruit votes"></div>
+        <div class="demo-controls">
+          <button type="button" class="btn tally-survey">Survey 20 students</button>
+          <button type="button" class="btn tally-reset">Reset</button>
+        </div>
+        <p class="tally-result demo-result" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ───────────── Memory aid ───────────── -->
+    <section id="remember" class="section wrap">
+      <div class="memory">
+        <h2>How to remember which is which</h2>
+        <ul>
+          <li><span class="tag median">Median</span> is in the <strong>middle</strong>, like the median strip down the middle of a road.</li>
+          <li><span class="tag mode">Mode</span> sounds like <strong>MOst</strong>: it's the value you see the most.</li>
+          <li><span class="tag mean">Mean</span> is the "mean" one, because it makes you do the most work: add them all, then divide.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ───────────── Playground ───────────── -->
+    <section id="playground" class="section wrap">
+      <h2>The playground: all three at once</h2>
+      <p>Tap the number line to add a value. Drag a dot to move it. Double-tap a dot (or select it and press Delete) to remove it. With a keyboard, Tab to a dot and use the arrow keys.</p>
+      <div class="demo-card" data-demo="playground">
+        <div class="results">
+          <div class="result mean"><span class="result-label">Mean</span><span class="result-value pg-mean">–</span></div>
+          <div class="result median"><span class="result-label">Median</span><span class="result-value pg-median">–</span></div>
+          <div class="result mode"><span class="result-label">Mode</span><span class="result-value pg-mode">–</span></div>
+        </div>
+        <div class="plot-wrap">
+          <svg class="dotplot" tabindex="-1" viewBox="0 0 640 250" preserveAspectRatio="xMidYMid meet" role="group" aria-label="Dot plot from 0 to 20. Click to add a value."></svg>
+        </div>
+        <div class="demo-controls">
+          <button type="button" class="btn pg-random">Random data</button>
+          <button type="button" class="btn pg-reset">Reset</button>
+          <button type="button" class="btn pg-clear">Clear</button>
+          <button type="button" class="btn pg-remove" disabled>Remove selected</button>
+        </div>
+        <p class="pg-message demo-message" role="status"></p>
+        <p class="sr-only pg-live" aria-live="polite"></p>
+        <details class="working" open>
+          <summary>Show the working</summary>
+          <div class="working-grid">
+            <div class="working-item mean"><h4>Mean</h4><div class="pg-work-mean"></div></div>
+            <div class="working-item median"><h4>Median</h4><div class="pg-work-median"></div></div>
+            <div class="working-item mode"><h4>Mode</h4><div class="pg-work-mode"></div></div>
+          </div>
+        </details>
+      </div>
+      <p class="tip">Challenge: can you make a data set where the mean, median and mode are all the same number? What about one where they're all different?</p>
+    </section>
+
+    <!-- ───────────── Choosing ───────────── -->
+    <section id="choosing" class="section wrap">
+      <h2>Which average should I use?</h2>
+      <p>All three are "averages", but they can give very different answers. Pick the one that tells the most honest story about your data.</p>
+      <div class="compare">
+        <article class="compare-card mean">
+          <h3><span class="tag mean">Mean</span></h3>
+          <p><strong>Good at:</strong> using every single value, so nothing is ignored.</p>
+          <p><strong>Watch out:</strong> one very big or very small value (an <em>outlier</em>) can drag it a long way.</p>
+          <p><strong>Use it for:</strong> test scores in a class, or average temperature over a week.</p>
+        </article>
+        <article class="compare-card median">
+          <h3><span class="tag median">Median</span></h3>
+          <p><strong>Good at:</strong> ignoring outliers, so it shows what's typical.</p>
+          <p><strong>Watch out:</strong> it doesn't notice how big the extreme values are.</p>
+          <p><strong>Use it for:</strong> house prices, or pocket money when one friend gets loads.</p>
+        </article>
+        <article class="compare-card mode">
+          <h3><span class="tag mode">Mode</span></h3>
+          <p><strong>Good at:</strong> working with categories like colours or foods.</p>
+          <p><strong>Watch out:</strong> there might be no mode, or several.</p>
+          <p><strong>Use it for:</strong> the most popular shoe size a shop should stock.</p>
+        </article>
+      </div>
+
+      <div class="demo-card" data-demo="outlier" id="outlier">
+        <div class="demo-head">
+          <h3>Try it: the outlier explorer</h3>
+          <p>Five friends get <span class="nums">£4, £5, £5, £6, £7</span> pocket money. A new friend joins. Slide to choose how much they get.</p>
+        </div>
+        <label class="slider-label">New friend's pocket money: <strong>£<output class="ol-value">5</output></strong>
+          <input type="range" class="ol-slider" min="0" max="100" step="1" value="5">
+        </label>
+        <div class="ol-scale" aria-hidden="true">
+          <div class="ol-track"></div>
+          <div class="ol-dots"></div>
+          <div class="ol-marker mean"><span>Mean</span></div>
+          <div class="ol-marker median"><span>Median</span></div>
+          <div class="ol-ticks"><span>£0</span><span>£25</span><span>£50</span><span>£75</span><span>£100</span></div>
+        </div>
+        <div class="results two">
+          <div class="result mean"><span class="result-label">Mean</span><span class="result-value ol-mean">–</span></div>
+          <div class="result median"><span class="result-label">Median</span><span class="result-value ol-median">–</span></div>
+        </div>
+        <p class="ol-caption demo-result" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ───────────── Quiz ───────────── -->
+    <section id="quiz" class="section wrap">
+      <h2>Quick quiz</h2>
+      <p>Test yourself. You get instant feedback on every answer.</p>
+      <div class="demo-card" data-demo="quiz">
+        <p class="quiz-score" aria-live="polite">Score: 0 / 0</p>
+        <ol class="quiz-list"></ol>
+        <p class="quiz-final demo-result" aria-live="polite"></p>
+        <button type="button" class="btn btn-primary quiz-retry">Try again</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Built with spec-driven development using <a href="https://github.com/Fission-AI/OpenSpec">OpenSpec</a>. Every number on this page is calculated by the same tested code.</p>
+    </div>
+  </footer>
+</body>
+</html>
